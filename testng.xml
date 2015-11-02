@@ -3,11 +3,11 @@
 <suite name="Default suite">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="geometricObjects.Rectangle.test.RectangleExclusionTest"/>
-      <class name="geometricObjects.Rectangle.test.FactoryTest"/>
-      <class name="geometricObjects.Quadrate.test.QuadrateTest"/>
-      <class name="geometricObjects.Rectangle.test.RectangleTest"/>
-      <class name="geometricObjects.Circle.test.CircleTest"/>
+      <class name="test.rectangle.RectangleExclusionTest"/>
+      <class name="test.rectangle.FactoryTest"></class>
+      <class name="test.quadrate.QuadrateTest"/>
+      <class name="test.rectangle.RectangleTest"/>
+      <class name="test.circle.CircleTest"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
