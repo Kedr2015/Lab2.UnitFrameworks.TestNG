@@ -1,34 +1,55 @@
-package geometricObjects.Rectangle.test;
+package test.rectangle;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import epam.saratov.homeWork.testng.objects.GeometricObjects;
-import epam.saratov.homeWork.testng.objects.GeometricObjects.Rectangle;
 
+/**
+ * @author Nikita_Varchenko
+ * 
+ *         In the class of the being tested exclusions of the object Rectangle
+ */
 public class RectangleExclusionTest {
     private GeometricObjects GeometOb;
-    private Rectangle rectangle;
-    
+
+    /**
+     * Actions performed before starting the test class
+     */
     @BeforeClass
     public void initGeometOb() {
 	this.GeometOb = new GeometricObjects();
     }
-    
+
+    /**
+     * Input validation tests for exclusions
+     * 
+     * @param sideOne
+     *            - side One length
+     * @param sideTwo
+     *            - side Two length
+     */
     @DataProvider(name = "DataForTest2")
     public Object[][] DataAreaExclusion() {
-	return new Object[][] { new Object[] { null, 3 },{3,null} };
+	return new Object[][] { new Object[] { null, 3 }, { 3, null } };
     }
-    
-    @Test(dataProvider = "DataForTest2",expectedExceptions = IllegalArgumentException.class)
+
+    /**
+     * Test method to check the exclusions
+     * 
+     * @param sideOne
+     *            - side One length
+     * @param sideTwo
+     *            - side Two length
+     */
+    @Test(dataProvider = "DataForTest2", expectedExceptions = IllegalArgumentException.class)
     public void checkingAreaCircleTestExclusion(Double sideOne, Double sideTwo) {
 	System.out.println("CheckingAreaCircleTest test started\nCheck areas knit Rectang with a sideOne " + sideOne
 		+ " and sideTwo" + sideTwo
 		+ "\nIf you initialize a null value appears in an exception, the test fails");
-	this.rectangle = GeometOb.getRectangle(sideOne, sideTwo);
+	GeometOb.getRectangle(sideOne, sideTwo);
 	System.out.println("The test fails");
     }
-    
-    
+
 }
