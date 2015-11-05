@@ -12,14 +12,14 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects;
  *         In the class of the being tested exclusions of the object Rectangle
  */
 public class RectangleExclusionTest {
-    private GeometricObjects GeometOb;
+    private GeometricObjects geometOb;
 
     /**
      * Actions performed before starting the test class
      */
     @BeforeClass
-    public void initGeometOb() {
-	this.GeometOb = new GeometricObjects();
+    public void initgeometOb() {
+	this.geometOb = new GeometricObjects();
     }
 
     /**
@@ -32,7 +32,7 @@ public class RectangleExclusionTest {
      */
     @DataProvider(name = "DataForTest2")
     public Object[][] DataAreaExclusion() {
-	return new Object[][] { new Object[] { null, 3 }, { 3, null } };
+	return new Object[][] { new Object[] { null, 3 }, { 3, null }, { null, null } };
     }
 
     /**
@@ -48,7 +48,7 @@ public class RectangleExclusionTest {
 	System.out.println("CheckingAreaCircleTest test started\nCheck areas knit Rectang with a sideOne " + sideOne
 		+ " and sideTwo" + sideTwo
 		+ "\nIf you initialize a null value appears in an exception, the test fails");
-	GeometOb.getRectangle(sideOne, sideTwo);
+	geometOb.getRectangle(sideOne, sideTwo);
 	System.out.println("The test fails");
     }
 

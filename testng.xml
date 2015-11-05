@@ -10,4 +10,4 @@
       <class name="test.circle.CircleTest"/>
     </classes>
   </test> <!-- Default test -->
-</suite> <!-- Default suite -->
+</suite> <!-- Default suite.-->

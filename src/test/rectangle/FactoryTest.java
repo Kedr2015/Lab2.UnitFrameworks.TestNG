@@ -3,7 +3,7 @@ package test.rectangle;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 
-public class FactoryTest extends RectangleTest {
+public class FactoryTest extends RectangleAreaTest {
 
     /**
      * factory method
