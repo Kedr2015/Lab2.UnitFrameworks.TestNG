@@ -10,6 +10,7 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects;
  * @author Nikita_Varchenko
  * 
  *         In the class of the being tested exclusions of the object Rectangle
+ *         Exclusion Test
  */
 public class RectangleExclusionTest {
     private GeometricObjects geometOb;
@@ -43,13 +44,12 @@ public class RectangleExclusionTest {
      * @param sideTwo
      *            - side Two length
      */
-    @Test(dataProvider = "DataForTest2", expectedExceptions = IllegalArgumentException.class)
+    @Test(dataProvider = "DataForTest2", expectedExceptions = NullPointerException.class)
     public void checkingAreaCircleTestExclusion(Double sideOne, Double sideTwo) {
 	System.out.println("CheckingAreaCircleTest test started\nCheck areas knit Rectang with a sideOne " + sideOne
 		+ " and sideTwo" + sideTwo
 		+ "\nIf you initialize a null value appears in an exception, the test fails");
 	geometOb.getRectangle(sideOne, sideTwo);
-	System.out.println("The test fails");
     }
 
 }

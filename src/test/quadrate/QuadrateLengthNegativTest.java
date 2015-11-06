@@ -11,13 +11,12 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects.Quadrate;
 /**
  * @author Nikita_Varchenko
  * 
- *         In the class of the object being tested methods of the Quadrate, and
- *         the exclusions
+ *         In the class of the object being tested methods of the Quadrate
+ *         Negativ Test
  */
-public class QuadrateAreaTest {
+public class QuadrateLengthNegativTest {
     private GeometricObjects geometOb;
     private Quadrate quadrate;
-    private double area;
 
     /**
      * Actions performed before starting the test class
@@ -28,38 +27,31 @@ public class QuadrateAreaTest {
     }
 
     /**
-     * Input validation tests for area and perimeter
+     * Input validation tests for perimeter
      * 
      * @return These side length
      */
     @DataProvider(name = "DataForTest")
     public Object[][] DataArea() {
-	return new Object[][] { new Object[] { 4 }, new Object[] { 0 }, new Object[] { -1 }, };
+	return new Object[][] { new Object[] { -1 }, };
     }
 
-
     /**
-     * Test method to check the area
+     * Test method to check the length
      * 
      * @param side
      *            - side length
      */
     @Test(dataProvider = "DataForTest")
-    public void checkingAreaCircleTest(double side) {
-	System.out.println("CheckingAreaCircleTest test started\n Check areas knit circle with a radius " + side);
+    public void checkingLengthCircleTest(double side) {
+	System.out.println("CheckingLengthCircleTest test started\n Check areas knit circle with a side " + side);
 	try {
 	    this.quadrate = geometOb.getQuadrate(side);
 	} catch (NullPointerException e) {
-	    System.out.println("The method fails. The radius of the circle created " + side);
+	    System.out.println("The method fails. The side of the circle created " + side);
 	}
-	area = Math.pow(side, 2);
-	Assert.assertEquals(quadrate.getSquare(), area,
-		"For side = " + side + "\nThe test fails, the area or the number of decimal places does not match");
-	System.out.println("The test successfully completed. Area= " + quadrate.getSquare() + "\n");
+	Assert.assertEquals(quadrate.getPerimeter(), 0.0,
+		"For side = " + side + "\nA negative side, the method considers the perimeter");
+	System.out.println("The test successfully completed.");
     }
-
-    
-
-    
-
 }

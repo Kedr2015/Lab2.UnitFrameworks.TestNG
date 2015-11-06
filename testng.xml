@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Default suite">
-  <test verbose="2" name="Default test">
-    <classes>
-      <class name="test.rectangle.RectangleExclusionTest"/>
-      <class name="test.rectangle.FactoryTest"></class>
-      <class name="test.quadrate.QuadrateTest"/>
-      <class name="test.rectangle.RectangleTest"/>
-      <class name="test.circle.CircleTest"/>
-    </classes>
-  </test> <!-- Default test -->
-</suite> <!-- Default suite.-->
+	<test verbose="2" name="Default test">
+		<classes>
+			<class name="test.rectangle.RectangleLengthNegativTest" />
+			<class name="test.quadrate.QuadrateLengthNegativTest" />
+			<class name="test.rectangle.RectangleQuadrateRectanglePositiveTest" />
+			<class name="test.rectangle.RectangleQuadrateRectangleNegativTest" />
+			<class name="test.rectangle.RectangleLengthPositiveTest" />
+			<class name="test.circle.CircleLengthPositiveTest" />
+			<class name="test.circle.CircleExclusionTest" />
+			<class name="test.quadrate.QuadrateAreaPositiveTest" />
+			<class name="test.quadrate.QuadrateExclusionTest" />
+			<class name="test.circle.CircleAreaPositiveTest" />
+			<class name="test.rectangle.RectangleExclusionTest" />
+			<class name="test.quadrate.QuadrateLengthPositiveTest" />
+			<class name="test.quadrate.QuadrateAreaNegativTest" />
+			<class name="test.circle.CircleLengthNegativTest" />
+			<class name="test.rectangle.FactoryPositiveTest" />
+			<class name="test.circle.CircleAreaNegativeTest" />
+			<class name="test.rectangle.FactoryNegativTest" />
+		</classes>
+	</test> <!-- Default test -->
+</suite> <!-- Default suite. -->

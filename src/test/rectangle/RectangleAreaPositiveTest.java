@@ -11,8 +11,11 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects.Rectangle;
  * @author Nikita_Varchenko
  * 
  *         In the class of the object being tested methods of the Rectangle
+ * 
+ *         It does not work without factory
+ *         Positive Test
  */
-public class RectangleAreaTest {
+public class RectangleAreaPositiveTest {
     private Double sideOne;
     private Double sideTwo;
     private GeometricObjects geometOb;
@@ -27,7 +30,7 @@ public class RectangleAreaTest {
      * @param sideTwo
      *            - side Two length
      */
-    public RectangleAreaTest(Double sideOne, Double sideTwo) {
+    public RectangleAreaPositiveTest(Double sideOne, Double sideTwo) {
 	this.sideOne = sideOne;
 	this.sideTwo = sideTwo;
     }
@@ -59,9 +62,5 @@ public class RectangleAreaTest {
 		"For sideOne = " + sideOne + " and sideTwo" + sideTwo + "\nThe test fails, the area does not match");
 	System.out.println("The test successfully completed");
     }
-
-   
-
-    
 
 }

@@ -1,6 +1,5 @@
 package test.circle;
 
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -11,10 +10,10 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects.Circle;
 /**
  * @author Nikita_Varchenko
  * 
- *         In the class of the object being tested methods of the circle, and
- *         the exclusions
+ *         In the class of the object being tested methods of the circle.
+ *         Positive Test
  */
-public class CircleAreaTest {
+public class CircleAreaPositiveTest {
     private GeometricObjects geometOb;
     private Circle circle;
     private double area;
@@ -28,14 +27,13 @@ public class CircleAreaTest {
     }
 
     /**
-     * Input validation tests for area and perimeter
+     * Input validation tests for area
      * 
      * @return These range and rounding marks
      */
     @DataProvider(name = "DataForTest")
     public Object[][] DataArea() {
-	return new Object[][] { new Object[] { 4, 3 }, new Object[] { 0, 3 }, new Object[] { -1, 3 },
-		new Object[] { 5, 4 }, new Object[] { 3, 1 }, new Object[] { 5, 0 }, new Object[] { 5, -1 }, };
+	return new Object[][] { new Object[] { 4 }, new Object[] { 0 } };
     }
 
     /**
@@ -47,7 +45,7 @@ public class CircleAreaTest {
      *            - rounding marks
      */
     @Test(dataProvider = "DataForTest")
-    public void checkingAreaCircleTest(double radius, int numberDigitsDecimalPoint) {
+    public void checkingAreaCircleTest(double radius) {
 	System.out.println("checkingAreaCircleTest test started\n Check areas knit circle with a radius " + radius);
 	try {
 	    this.circle = geometOb.getCircle(radius);
@@ -55,12 +53,9 @@ public class CircleAreaTest {
 	    System.out.println("The method fails. The radius of the circle created " + radius);
 	}
 	area = Math.PI * Math.pow(radius, 2);
-	Assert.assertEquals(circle.getSquare(), area,0.0001,
-		"For radius = " + radius + " And the number of decimal places " + numberDigitsDecimalPoint
-			+ "\nThe test fails, the area or the number of decimal places does not match");
-	System.out.println("The test successfully completed");
+	Assert.assertEquals(circle.getSquare(), area, 0.001,
+		"For radius = " + radius + "\nThe test fails, the area or the number of decimal places does not match");
+	System.out.println("The test successfully completed\n");
     }
-
-    
 
 }

@@ -9,12 +9,14 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects;
 /**
  * @author Nikita_Varchenko
  * 
- *         n the class of the being tested exclusions of  the Quadrate
+ *         In the class of the being tested exclusions of the Quadrate
+ * 
+ *         Exclusion Test
  */
 public class QuadrateExclusionTest {
-  
+
     private GeometricObjects geometOb;
-    
+
     /**
      * Actions performed before starting the test class
      */
@@ -22,7 +24,7 @@ public class QuadrateExclusionTest {
     public void initgeometOb() {
 	this.geometOb = new GeometricObjects();
     }
-    
+
     /**
      * Input validation tests for exclusions
      * 
@@ -32,7 +34,7 @@ public class QuadrateExclusionTest {
     public Object[][] DataAreaExclusion() {
 	return new Object[][] { new Object[] { null } };
     }
-    
+
     /**
      * Test method to check the exclusions
      * 

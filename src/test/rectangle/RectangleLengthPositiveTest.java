@@ -8,7 +8,13 @@ import org.testng.annotations.Test;
 import epam.saratov.homeWork.testng.objects.GeometricObjects;
 import epam.saratov.homeWork.testng.objects.GeometricObjects.Rectangle;
 
-public class RectangleLengthTest {
+/**
+ * @author Nikita_Varchenko
+ * 
+ *         In the class of the object being tested methods of the Rectangle.
+ *         Positive Test
+ */
+public class RectangleLengthPositiveTest {
     private GeometricObjects geometOb;
     private Rectangle rectangle;
     private double perimeter;
@@ -21,7 +27,7 @@ public class RectangleLengthTest {
     @DataProvider(name = "DataForTest")
     public Object[][] DataArea() {
 	return new Object[][] { new Object[] { 3, 4 }, new Object[] { 0, 0 }, new Object[] { 3, 5 },
-		new Object[] { 5, 5, }, new Object[] { 1, -1 }, new Object[] { -1, 3 } };
+		new Object[] { 5, 5, } };
     }
 
     /**

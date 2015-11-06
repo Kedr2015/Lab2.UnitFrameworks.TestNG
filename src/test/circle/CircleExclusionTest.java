@@ -3,9 +3,13 @@ package test.circle;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import epam.saratov.homeWork.testng.objects.GeometricObjects;
-
+/**
+ * @author Nikita_Varchenko
+ * 
+ *         In the class of the object being tested methods of the circle.
+ *         Exclusion Test
+ */
 public class CircleExclusionTest {
     private GeometricObjects geometOb;
 
@@ -35,7 +39,7 @@ public class CircleExclusionTest {
      * @param numberDigitsDecimalPoint
      *            - rounding marks
      */
-    @Test(dataProvider = "DataForTest2", expectedExceptions = NullPointerException.class, dependsOnMethods = "checkingLengthCircleTest")
+    @Test(dataProvider = "DataForTest2", expectedExceptions = NullPointerException.class)
     public void checkingAreaCircleTestExclusion(Double radius, Integer numberDigitsDecimalPoint) {
 	System.out.println("checkingAreaCircleTestExclusion test started\n Check areas knit circle with a radius "
 		+ radius + "\nIf you initialize a null value appears in an exception, the test fails");
