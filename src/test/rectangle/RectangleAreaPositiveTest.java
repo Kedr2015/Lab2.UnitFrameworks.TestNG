@@ -12,8 +12,7 @@ import epam.saratov.homeWork.testng.objects.GeometricObjects.Rectangle;
  * 
  *         In the class of the object being tested methods of the Rectangle
  * 
- *         It does not work without factory
- *         Positive Test
+ *         It does not work without factory Positive Test
  */
 public class RectangleAreaPositiveTest {
     private Double sideOne;

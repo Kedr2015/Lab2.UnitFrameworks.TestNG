@@ -2,7 +2,13 @@ package test.rectangle;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
-
+/**
+ * @author Nikita_Varchenko
+ * 
+ *         Factory method to check the area
+ * 
+ *         Negativ Test
+ */
 public class FactoryNegativTest extends RectangleAreaNegativTest {
 
     /**

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import epam.saratov.homeWork.testng.objects.GeometricObjects;
 import epam.saratov.homeWork.testng.objects.GeometricObjects.Circle;
+
 /**
  * @author Nikita_Varchenko
  * 
@@ -19,7 +20,7 @@ public class CircleLengthPositiveTest {
     private double length;
 
     /**
-     * Actions performed before starting the test class Positive Test 
+     * Actions performed before starting the test class Positive Test
      */
     @BeforeClass
     public void initgeometOb() {

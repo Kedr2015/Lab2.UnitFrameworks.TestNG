@@ -18,7 +18,6 @@ public class CircleLengthNegativTest {
     private GeometricObjects geometOb;
     private Circle circle;
 
-
     /**
      * Actions performed before starting the test class Negativ Test
      */
@@ -53,8 +52,8 @@ public class CircleLengthNegativTest {
 	} catch (NullPointerException e) {
 	    System.out.println("The method fails. The radius of the circle created " + radius);
 	}
-	Assert.assertEquals(circle.getCircumference(),0.0, "For radius = " + radius
-		+ "\nA negative radius, the method considers the perimeter");
+	Assert.assertEquals(circle.getCircumference(), 0.0,
+		"For radius = " + radius + "\nA negative radius, the method considers the perimeter");
 	System.out.println("The test successfully completed\n");
     }
 }

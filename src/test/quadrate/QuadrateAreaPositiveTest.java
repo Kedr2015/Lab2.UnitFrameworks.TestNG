@@ -28,7 +28,7 @@ public class QuadrateAreaPositiveTest {
     }
 
     /**
-     * Input validation tests for area  
+     * Input validation tests for area
      * 
      * @return These side length
      */

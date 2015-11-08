@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 
 import epam.saratov.homeWork.testng.objects.GeometricObjects;
 import epam.saratov.homeWork.testng.objects.GeometricObjects.Rectangle;
+
 /**
  * @author Nikita_Varchenko
  * 
  *         In the class of the object being tested methods of the Rectangle
  * 
- *         It does not work without factory
- *         Negativ Test  
+ *         It does not work without factory Negativ Test
  */
 
 public class RectangleAreaNegativTest {
@@ -20,7 +20,6 @@ public class RectangleAreaNegativTest {
     private Double sideTwo;
     private GeometricObjects geometOb;
     private Rectangle rectangle;
-
 
     /**
      * The constructor for the factory method
@@ -57,8 +56,8 @@ public class RectangleAreaNegativTest {
 	    System.out.println(
 		    "The method fails. The sideOne of the Rectang created " + sideOne + " and sideTwo " + sideTwo);
 	}
-	Assert.assertEquals(rectangle.getSquare(), 0.0,
-		"For sideOne = " + sideOne + " and sideTwo " + sideTwo + "\nWhen the negative aspects of the method calculates the value");
+	Assert.assertEquals(rectangle.getSquare(), 0.0, "For sideOne = " + sideOne + " and sideTwo " + sideTwo
+		+ "\nWhen the negative aspects of the method calculates the value");
 	System.out.println("The test successfully completed");
     }
 }
