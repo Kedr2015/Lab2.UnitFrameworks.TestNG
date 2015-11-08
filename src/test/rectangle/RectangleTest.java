@@ -47,7 +47,7 @@ public class RectangleTest {
      * 
      * Check equality of the parties
      */
-    public boolean isCompare(double sideOne, double sideTwo) {
+    public boolean isQuadrate(double sideOne, double sideTwo) {
 	int compare = Double.compare(Math.abs(sideOne), Math.abs(sideTwo));
 	if (compare == 0) {
 	    return true;
@@ -95,7 +95,7 @@ public class RectangleTest {
 	System.out.println("checkingQuadrateRectangleTest test started\nCheck areas knit Rectang with a sideOne "
 		+ sideOne + " and sideTwo " + sideTwo);
 	this.rectangle = geometOb.getRectangle(sideOne, sideTwo);
-	Assert.assertEquals(rectangle.isQuadrate(), isCompare(sideOne, sideTwo), "Rectang with a sideOne " + sideOne
+	Assert.assertEquals(rectangle.isQuadrate(), isQuadrate(sideOne, sideTwo), "Rectang with a sideOne " + sideOne
 		+ " and sideTwo " + sideTwo + "\nThe method attribute of a square does not work properly");
 	System.out.println("The test successfully completed");
     }
