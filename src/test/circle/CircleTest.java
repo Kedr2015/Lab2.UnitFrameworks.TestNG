@@ -58,7 +58,7 @@ public class CircleTest {
      * @param radius
      *            - radius
      */
-    @Test(dataProvider = "DataForTest")
+    @Test(dataProvider = "DataForTest",dependsOnMethods="checkingLengthCircleTest")
     public void circleConstructorTest(double radius) {
 	System.out.println("circleConstructorTest test started\n Check areas knit circle with a radius " + radius);
 	Circle circle = new GeometricObjects().getCircle(radius);
