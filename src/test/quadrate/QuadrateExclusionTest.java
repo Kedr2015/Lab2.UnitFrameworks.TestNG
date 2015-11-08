@@ -41,7 +41,7 @@ public class QuadrateExclusionTest {
      * @param side
      *            - side length
      */
-    @Test(dataProvider = "DataForTest2", expectedExceptions = NullPointerException.class)
+    @Test(dataProvider = "DataForTest2", expectedExceptions = RuntimeException.class)
     public void checkingAreaCircleTestExclusion(Double side) {
 	System.out.println("CheckingAreaCircleTest test started\n Check areas knit circle with a side " + side
 		+ "\nIf you initialize a null value appears in an exception, the test fails");

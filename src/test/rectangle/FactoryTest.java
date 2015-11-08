@@ -2,14 +2,15 @@ package test.rectangle;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
+
 /**
  * @author Nikita_Varchenko
  * 
  *         Factory method to check the area
  * 
- *         Negativ Test
+ *         Positive Test
  */
-public class FactoryNegativTest extends RectangleAreaNegativTest {
+public class FactoryTest extends RectangleTest {
 
     /**
      * factory method
@@ -19,16 +20,17 @@ public class FactoryNegativTest extends RectangleAreaNegativTest {
      * @param sideTwo
      *            - side Two length
      */
-    @Factory(dataProvider = "Negativ")
-    public FactoryNegativTest(double sideOne, double sideTwo) {
+    @Factory(dataProvider = "Positive")
+    public FactoryTest(double sideOne, double sideTwo) {
 	super(sideOne, sideTwo);
     }
 
     /**
      * These initialization test
      */
-    @DataProvider(name = "Negativ")
+    @DataProvider(name = "Positive")
     public static Object[][] getValues() {
-	return new Object[][] { new Object[] { 1, -1 }, new Object[] { -1, 3 } };
+	return new Object[][] { new Object[] { 3, 4 }, new Object[] { 0, 0 }, new Object[] { 3, 5 },
+		new Object[] { 5, 5, }, new Object[] { 1, -1 }, new Object[] { -1, 3 } };
     }
 }

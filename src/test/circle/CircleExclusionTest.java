@@ -40,7 +40,7 @@ public class CircleExclusionTest {
      * @param numberDigitsDecimalPoint
      *            - rounding marks
      */
-    @Test(dataProvider = "DataForTest2", expectedExceptions = NullPointerException.class)
+    @Test(dataProvider = "DataForTest2", expectedExceptions = RuntimeException.class)
     public void checkingAreaCircleTestExclusion(Double radius, Integer numberDigitsDecimalPoint) {
 	System.out.println("checkingAreaCircleTestExclusion test started\n Check areas knit circle with a radius "
 		+ radius + "\nIf you initialize a null value appears in an exception, the test fails");

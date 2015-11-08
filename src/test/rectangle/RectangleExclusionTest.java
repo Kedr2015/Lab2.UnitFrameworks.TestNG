@@ -44,7 +44,7 @@ public class RectangleExclusionTest {
      * @param sideTwo
      *            - side Two length
      */
-    @Test(dataProvider = "DataForTest2", expectedExceptions = NullPointerException.class)
+    @Test(dataProvider = "DataForTest2", expectedExceptions = RuntimeException.class)
     public void checkingAreaCircleTestExclusion(Double sideOne, Double sideTwo) {
 	System.out.println("CheckingAreaCircleTest test started\nCheck areas knit Rectang with a sideOne " + sideOne
 		+ " and sideTwo" + sideTwo
